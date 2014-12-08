@@ -897,6 +897,12 @@ function load() {
   off(document, 'load', load);
   off(document, 'DOMContentLoaded', load);
   tty.open();
+
+  // [ggrossman 12.07.14] Force a window to be created
+  setTimeout(function () {
+    var window = new Window();
+    window.maximize();
+  }, 100);
 }
 
 on(document, 'load', load);

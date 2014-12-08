@@ -7,6 +7,9 @@
 
 process.title = 'tty.js';
 
+// Hack to keep telnet from getting to a subshell
+process.env.SHELL = '/sbin/nologin';
+
 var tty = require('../');
 
 var conf = tty.config.readConfig()
