@@ -82,7 +82,9 @@ tty.open = function() {
 
   if (open) {
     on(open, 'click', function() {
-      new Window;
+      // [ggrossman 12.07.14] Maximize the window after opening
+      var window = new Window;
+      window.maximize();
     });
   }
 
@@ -902,7 +904,7 @@ function load() {
   setTimeout(function () {
     var window = new Window();
     window.maximize();
-  }, 100);
+  }, 1000);
 }
 
 on(document, 'load', load);
