@@ -1,2 +1,2 @@
-{"shell":"/usr/bin/telnet","shellArgs":["sourcedelica.com",8888]}
+{"shell":"/usr/bin/telnet","shellArgs":["-E","sourcedelica.com",8888]}
 
